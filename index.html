@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#6c5ce7" />
+    <title>Daily Boost</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./app.js"></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="logo" aria-hidden="true">☀️</span>
+        <h1>Daily Boost</h1>
+      </div>
+      <div class="today" id="today"></div>
+    </header>
+
+    <main class="container">
+      <section class="card tasks" aria-labelledby="tasks-title">
+        <div class="card__header">
+          <h2 id="tasks-title">Tasks</h2>
+          <button class="btn btn--ghost" id="clearCompletedBtn" title="Clear completed tasks">Clear Done</button>
+        </div>
+        <form id="taskForm" class="add-form" autocomplete="off">
+          <input id="taskInput" type="text" placeholder="Add a new task…" aria-label="Task description" required />
+          <button type="submit" class="btn">Add</button>
+        </form>
+        <ul id="taskList" class="task-list" aria-live="polite"></ul>
+        <div class="card__footer" id="taskSummary" aria-live="polite"></div>
+      </section>
+
+      <section class="card weather" aria-labelledby="weather-title">
+        <div class="card__header">
+          <h2 id="weather-title">Weather</h2>
+        </div>
+        <form id="weatherForm" class="add-form" autocomplete="off">
+          <input id="cityInput" type="text" placeholder="Enter city (e.g., London)" aria-label="City" />
+          <button type="submit" class="btn">Get Weather</button>
+        </form>
+        <div id="weatherInfo" class="weather__info" aria-live="polite">
+          <p class="muted">Enter a city to see the current weather.</p>
+        </div>
+        <p class="muted small">Using OpenWeatherMap. Add your API key in <code>app.js</code>.</p>
+      </section>
+
+      <section class="card quote" aria-labelledby="quote-title">
+        <div class="card__header">
+          <h2 id="quote-title">Daily Motivation</h2>
+          <button class="btn btn--ghost" id="refreshQuoteBtn" title="Get a new quote">Refresh</button>
+        </div>
+        <blockquote class="quote__text" id="quoteText">Loading quote…</blockquote>
+        <div class="quote__author" id="quoteAuthor"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Made with ❤️ for your daily boost</span>
+    </footer>
+  </body>
+</html>
