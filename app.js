@@ -1,7 +1,7 @@
 // Daily Boost - app.js
 
 // ====== Config ======
-const OPENWEATHER_API_KEY = 'YOUR_OPENWEATHER_API_KEY'; // <-- Replace with your OpenWeatherMap API key
+const OPENWEATHER_API_KEY = 'e370cc5b2ecc6f86809d77d3cd18471f'; // <-- Replace with your OpenWeatherMap API key
 const OPENWEATHER_BASE_URL = 'https://api.openweathermap.org/data/2.5/weather';
 const ZENQUOTES_URL = 'https://zenquotes.io/api/today';
 
